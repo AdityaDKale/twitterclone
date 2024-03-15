@@ -97,8 +97,14 @@ const MoreLight= (props) => {
     </svg>)
 }
 
+const BreadCrumb = (props) => {
+    return (<svg viewBox='0 0 24 24' width={'1.25rem'} height={'1.25rem'} {...props}>
+    <path d='M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z'/>
+    </svg>)
+}
 
 
 
 
-export {LogoLight, HomeLight, ExploreLight, NotificationsLight, MessagesLight, GrokLight, ListsLight, ProfileLight, MoreLight}
+
+export {LogoLight, HomeLight, ExploreLight, NotificationsLight, MessagesLight, GrokLight, ListsLight, ProfileLight, MoreLight, BreadCrumb}
