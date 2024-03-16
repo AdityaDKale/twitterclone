@@ -2,7 +2,7 @@ import React from 'react'
 
 const RightSidebar = () => {
     return (
-        <div>RightSidebar</div>
+        <div className='w-72 border-l border-slate-200'>RightSidebar</div>
     )
 }
 
