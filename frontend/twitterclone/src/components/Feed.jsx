@@ -1,5 +1,5 @@
 import React from 'react'
-import {SettingsLight, ImageIcon, GIFIcon, PollIcon, EmojiIcon, ScheduleIcon} from './Media'
+import {SettingsLight, ImageIcon, GIFIcon, PollIcon, EmojiIcon, ScheduleIcon, MessageIcon, RepostIcon, LikeIcon, ViewIcon} from './Media'
 import Avatar from 'react-avatar'
 import TextareaAutosize from 'react-textarea-autosize';
 
@@ -53,13 +53,49 @@ const InputTweet = ({image}) => {
     )
 }
 
+const TweetElements = (props) => {
+    return (
+        <div className='flex w-9 h-9 items-center justify-center rounded-full hover:bg-slate-200 mr-28'>
+            {props.icon} <span className='text-sm'>{props.count}</span>
+        </div>
+    )
+}
+
+const Tweets = ({image, act_name, username, time}) => {
+    return (
+        <div>
+            <div className='flex m-5'>
+                <Avatar name={image} className='rounded-full mr-3' size='3rem'/>
+                <div className='font-sans'>
+                    <span className='font-bold'>{act_name} </span><span className='text-nowrap font-normal text-slate-500'> @{username} · {time}</span>
+                    <div>
+                        "When returning information in a structured format the fields can be a myriad of types: string, boolean, integers. One of the hardest types to correctly handle is high-cardinality categorical values (or enums)"
+                    <div className='flex mt-5'>
+                        <TweetElements icon={<MessageIcon className='fill-slate-500'/>} count={5}/>
+                        <TweetElements icon={<RepostIcon className='fill-slate-500'/>} count={11}/>
+                        <TweetElements icon={<LikeIcon className='fill-slate-500'/>} count={7}/>
+                        <TweetElements icon={<ViewIcon className='fill-slate-500'/>} count={15}/>
+                    </div>
+                    </div>
+                </div> 
+            </div>
+            <div className='border-b border-slate-200 mt-5'></div>
+        </div>
+    )
+}
+
 const BlueButton = ({text}) => <button className='h-9 bg-sky-500 hover:bg-sky-600 rounded-full mr-12 w-20 text-white text-base font-bold'> {text} </button>
 
 const Feed = () => {
     return (
-        <div className='w-[80%]'>
+        <div className='w-[80%] h-full max-h-screen overflow-y-auto flex flex-col flex-grow'>
             <TopButtons />
             <InputTweet image={'AK'} />
+            <Tweets image={'AK'} act_name="Aditya Kale" username='adityadkale' time={"2h"}/>
+            <Tweets image={'AKH'} act_name="Aditya Khade" username='adityakhadeak' time={"2h"}/>
+            <Tweets image={'RJAIN'} act_name="Rushabh Jain" username='rjain' time={"2h"}/>
+            <Tweets image={'MM'} act_name="Mayur Mane" username='mayur' time={"2h"}/>
+            <Tweets image={'AK'} act_name="Aditya Kale" username='adityadkale' time={"2h"}/>
         </div>
     )
 }
