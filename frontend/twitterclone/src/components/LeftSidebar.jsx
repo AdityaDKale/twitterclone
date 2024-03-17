@@ -2,18 +2,16 @@ import React from 'react';
 import { LogoLight, HomeLight, ExploreLight, NotificationsLight, MessagesLight, GrokLight, ListsLight, ProfileLight, MoreLight, BreadCrumb, BookmarksLight, CommunityLight } from './Media';
 import Avatar from 'react-avatar';
 
-
 const Element = ({ icon, text, selected }) => {
   return (
-    <div className={`flex text-xl font-sans hover:bg-slate-200 rounded-full h-[3.75rem] items-center transition-all ${selected && 'font-bold'}`}>
+    <div className={`flex text-xl font-sans hover:bg-slate-200 rounded-full h-[3rem] items-center transition-all ${selected && 'font-bold'}`}>
       <div className='m-3'>{icon}</div>
       <div className={`m-3 ${selected ? '' : 'hidden sm:block'}`}>{text}</div>
     </div>
   );
 };
 
-
-const BlueButton = ({ text }) => <button className='h-12 bg-sky-500 hover:bg-sky-600 rounded-full ml-3 mt-6 w-60 text-white text-base font-bold'>{text}</button>;
+const BlueButton = ({ text }) => <button className='h-12 bg-sky-500 hover:bg-sky-600 rounded-full ml-3 mr-3 mt-6 w-60 text-white text-base font-bold'>{text}</button>;
 
 const UserButton = ({ image, act_name, username }) => {
   return (
@@ -34,7 +32,7 @@ const UserButton = ({ image, act_name, username }) => {
 
 const LeftSidebar = () => {
   return (
-      <div className="flex-shrink-0 w-72 border-r border-slate-200 flex flex-col justify-between">
+    <div className="flex flex-col h-screen border-r border-slate-200">
       <div className='flex flex-col overflow-y-auto mt-1 mb-1'>
         <LogoLight className='m-3' />
         <Element icon={<HomeLight selected={true} />} text={'Home'} selected={true} />

@@ -46,7 +46,7 @@ const InputTweet = ({ image }) => {
           </div>
         </form>
       </div>
-      <div className='border-b border-slate-200 ml-24 mr-14 mt-7 mb-7'></div>
+      <div className='border-b border-slate-200 mt-7 mb-7'></div>
     </div>
   );
 };
@@ -54,7 +54,7 @@ const InputTweet = ({ image }) => {
 
 const TweetElements = ({ icon, count }) => {
   return (
-    <div className='flex items-center justify-center rounded-full hover:bg-slate-200 mr-3 sm:mr-6 mb-2 sm:mb-0'>
+    <div className='flex items-center justify-center rounded-full hover:bg-slate-200 mr-14 lg:mr-28'>
       {icon} <span className='text-xs sm:text-sm'>{count}</span>
     </div>
   );
@@ -63,6 +63,7 @@ const TweetElements = ({ icon, count }) => {
 
 const Tweets = ({ image, act_name, username, time }) => {
   return (
+    <div>
     <div className='flex flex-col m-5'>
       <div className='flex items-center'>
         <Avatar name={image} className='rounded-full mr-3' size='3rem' />
@@ -79,8 +80,9 @@ const Tweets = ({ image, act_name, username, time }) => {
           <TweetElements icon={<ViewIcon className='fill-slate-500' />} count={15} />
         </div>
       </div>
-      <div className='border-b border-slate-200 mt-5'></div>
     </div>
+      <div className='border-b border-slate-200 mt-5'></div>
+      </div>
   );
 };
 
@@ -88,9 +90,9 @@ const BlueButton = ({ text }) => <button className='h-9 bg-sky-500 hover:bg-sky-
 
 const Feed = () => {
   return (
-    <div className='w-[80%] max-w-full overflow-hidden flex flex-col flex-grow'>
+    <div className='w-[80%] flex flex-col flex-grow overflow-y-auto h-screen'>
       <TopButtons />
-      <div className="flex-grow overflow-y-auto">
+      <div className="flex-grow">
         <InputTweet image={'AK'} />
         <Tweets image={'AK'} act_name="Aditya Kale" username='adityadkale' time={"2h"} />
         <Tweets image={'AKH'} act_name="Aditya Khade" username='adityakhadeak' time={"2h"} />
