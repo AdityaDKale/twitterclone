@@ -6,12 +6,12 @@ const Element = ({ icon, text, selected }) => {
   return (
     <div className={`flex text-xl font-sans hover:bg-slate-200 rounded-full h-[3rem] items-center transition-all ${selected && 'font-bold'}`}>
       <div className='m-3'>{icon}</div>
-      <div className={`m-3 ${selected ? '' : 'hidden sm:block'}`}>{text}</div>
+      <div className={`m-3 max-lg:hidden${selected ? '' : ''}`}>{text}</div>
     </div>
   );
 };
 
-const BlueButton = ({ text }) => <button className='h-12 bg-sky-500 hover:bg-sky-600 rounded-full ml-3 mr-3 mt-6 w-60 text-white text-base font-bold'>{text}</button>;
+const BlueButton = ({ text }) => <button className='h-12 bg-sky-500 hover:bg-sky-600 rounded-full ml-3 mr-3 mt-6 w-60 text-white text-base font-bold max-lg:hidden'>{text}</button>;
 
 const UserButton = ({ image, act_name, username }) => {
   return (
@@ -19,11 +19,11 @@ const UserButton = ({ image, act_name, username }) => {
       <div>
         <Avatar name={image} className='rounded-full mr-3' size='3rem' />
       </div>
-      <div>
+      <div className='max-lg:hidden'>
         <div className='font-sans font-bold'>{act_name}</div>
         <div className='text-slate-500'>@{username}</div>
       </div>
-      <div className='align-middle ml-auto'>
+      <div className='align-middle ml-auto max-lg:hidden'>
         <BreadCrumb />
       </div>
     </div>

@@ -71,7 +71,7 @@ const Tweets = ({ image, act_name, username, time }) => {
             <span className='font-bold'>{act_name} </span><span className='text-nowrap font-normal text-slate-500'> @{username} · {time}</span>
           </div>
         </div>
-        <div className='ml-16'>
+        <div className='ml-16 2xl:ml-9'>
           "When returning information in a structured format the fields can be a myriad of types: string, boolean, integers. One of the hardest types to correctly handle is high-cardinality categorical values (or enums)"
           <div className='flex mt-3'>
             <TweetElements icon={<MessageIcon className='fill-slate-500' />} count={5} />
@@ -86,7 +86,7 @@ const Tweets = ({ image, act_name, username, time }) => {
   );
 };
 
-const BlueButton = ({ text }) => <button className='h-9 bg-sky-500 hover:bg-sky-600 rounded-full mr-12 w-20 text-white text-base font-bold'> {text} </button>;
+const BlueButton = ({ text }) => <button className='h-9 bg-sky-500 hover:bg-sky-600 rounded-full mr-2 w-20 text-white text-base font-bold'> {text} </button>;
 
 const Feed = () => {
   return (

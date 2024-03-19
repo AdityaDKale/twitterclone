@@ -26,7 +26,7 @@ const SearchButton = () => {
 
 const RightSidebar = () => {
     return (
-        <div className='w-[28%] border-l border-slate-200'>
+        <div className='w-[28%] border-l border-slate-200 max-2xl:hidden'>
             <div className='ml-8'>
                 <SearchButton />
                 <Subscribe title={"Subscribe to Premium"} content={"hello"} />
