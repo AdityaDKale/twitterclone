@@ -64,25 +64,25 @@ const TweetElements = ({ icon, count }) => {
 const Tweets = ({ image, act_name, username, time }) => {
   return (
     <div>
-    <div className='flex flex-col m-5'>
-      <div className='flex items-center'>
-        <Avatar name={image} className='rounded-full mr-3' size='3rem' />
-        <div className='font-sans flex flex-col'>
-          <span className='font-bold'>{act_name} </span><span className='text-nowrap font-normal text-slate-500'> @{username} · {time}</span>
+      <div className='flex flex-col m-5 mr-9'>
+        <div className='flex items-center'>
+          <Avatar name={image} className='rounded-full mr-3' size='3rem' />
+          <div className='font-sans flex flex-col'>
+            <span className='font-bold'>{act_name} </span><span className='text-nowrap font-normal text-slate-500'> @{username} · {time}</span>
+          </div>
+        </div>
+        <div className='ml-16'>
+          "When returning information in a structured format the fields can be a myriad of types: string, boolean, integers. One of the hardest types to correctly handle is high-cardinality categorical values (or enums)"
+          <div className='flex mt-3'>
+            <TweetElements icon={<MessageIcon className='fill-slate-500' />} count={5} />
+            <TweetElements icon={<RepostIcon className='fill-slate-500' />} count={11} />
+            <TweetElements icon={<LikeIcon className='fill-slate-500' />} count={7} />
+            <TweetElements icon={<ViewIcon className='fill-slate-500' />} count={15} />
+          </div>
         </div>
       </div>
-      <div>
-        "When returning information in a structured format the fields can be a myriad of types: string, boolean, integers. One of the hardest types to correctly handle is high-cardinality categorical values (or enums)"
-        <div className='flex mt-3'>
-          <TweetElements icon={<MessageIcon className='fill-slate-500' />} count={5} />
-          <TweetElements icon={<RepostIcon className='fill-slate-500' />} count={11} />
-          <TweetElements icon={<LikeIcon className='fill-slate-500' />} count={7} />
-          <TweetElements icon={<ViewIcon className='fill-slate-500' />} count={15} />
-        </div>
-      </div>
-    </div>
       <div className='border-b border-slate-200 mt-5'></div>
-      </div>
+    </div>
   );
 };
 
@@ -90,7 +90,7 @@ const BlueButton = ({ text }) => <button className='h-9 bg-sky-500 hover:bg-sky-
 
 const Feed = () => {
   return (
-    <div className='w-[80%] flex flex-col flex-grow overflow-y-auto h-screen'>
+    <div className='w-[100%] flex flex-col flex-grow overflow-y-auto h-screen'>
       <TopButtons />
       <div className="flex-grow">
         <InputTweet image={'AK'} />
