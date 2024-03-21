@@ -1,9 +1,10 @@
 import './App.css'
 import Home from './components/Home'
+import Body from './components/Body'
 
 const App = () => {
     return (
-        <Home />
+        <Body />
     )
 }
 
