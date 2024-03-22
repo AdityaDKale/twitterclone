@@ -4,12 +4,16 @@ This repository contains a project aimed at implementing a Twitter-like applicat
 
 ## Disclaimer
 
-This project is a work in progress and is intended for educational purposes only. The code and features presented here are not intended for production use. The author(s) of this repository are not responsible for any misuse or damage caused by the use of this code.
+This project is a work in progress and is intended for educational purposes only. The code and features presented here are not intended for production use. The author(s) of this repository are not responsible for any misuse or damage caused by the use of this code. All the images, trademarks and icons belong to X and its respective owners.
 
 ## Images
 Images are subject to change as project evolves.
 
+Home
 ![Front End Image](images/frontend_till_now.png)
+
+Profile
+![Front End Profile](images/frontend-profile.png)
 
 ## Getting Started
 

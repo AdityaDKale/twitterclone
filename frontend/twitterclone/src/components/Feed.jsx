@@ -105,3 +105,4 @@ const Feed = () => {
 };
 
 export default Feed;
+export { Tweets }
