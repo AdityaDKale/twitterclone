@@ -3,6 +3,7 @@ import { LogoLight } from './Media';
 import GoogleIcon from '../assets/google-icon.webp';
 import AppleLogo from '../assets/apple-logo.png';
 
+
 const GoogleSignup = () => {
     return (
         <div className="rounded-full border border-slate-300 p-1 w-fit px-16 hover:bg-slate-200">
@@ -27,12 +28,14 @@ const AppleSignup = () => {
     )
 }
 
+const BlueButton = ({ text }) => <button className='h-10 bg-sky-500 hover:bg-sky-600 rounded-full mt-3 w-[19rem] text-white text-base font-bold'>{text}</button>;
+const NormalButton = ({ text }) => <button className='h-10 rounded-full mt-3 w-[19rem] border border-slate-300 hover:bg-sky-100 text-base font-bold text-sky-500'>{text}</button>;
 
 const Login = () => {
     return (
         <div>
             <div className="grid content-around grid-cols-2">
-                <div className="grid w-auto content-center ml-12 items-center justify-center mt-40">
+                <div className="grid w-auto content-center ml-12 items-center justify-center mt-20">
                     <LogoLight className='flex size-80' />
                 </div>
                 <div className="ml-20">
@@ -41,6 +44,19 @@ const Login = () => {
                     <div className="grid mt-8 gap-2">
                         <GoogleSignup />
                         <AppleSignup />
+                    </div>
+                    <div className="flex items-center justify-center mt-2 w-[19rem]">
+                        <div className="w-full h-[1px] bg-slate-100"></div>
+                        <div className="text-center mx-2">or</div>
+                        <div className="w-full h-[1px] bg-slate-100"></div>
+                    </div>
+                    <BlueButton text={"Create Account"} />
+                    <div className="w-[19rem] text-xs mt-2 text-slate-500">
+                        By signing up, you agree to the <span className="text-sky-600">Terms of Service</span> and <span className="text-sky-600">Privacy Policy</span>, including <span className="text-sky-600">Cookie Use</span>.
+                    </div>
+                    <div className="grid mt-12 gap-2">
+                        <div className="font-bold">Already have an account?</div>
+                        <NormalButton text={"Sign In"} />
                     </div>
                 </div>
             </div>
