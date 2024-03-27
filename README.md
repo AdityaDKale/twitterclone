@@ -9,6 +9,9 @@ This project is a work in progress and is intended for educational purposes only
 ## Images
 Images are subject to change as project evolves.
 
+Login
+![Login](images/frontend-login.png)
+
 Home
 ![Front End Image](images/frontend_till_now.png)
 
