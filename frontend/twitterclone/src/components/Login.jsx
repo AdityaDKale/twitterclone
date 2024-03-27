@@ -2,6 +2,8 @@ import React from "react";
 import { LogoLight } from './Media';
 import GoogleIcon from '../assets/google-icon.webp';
 import AppleLogo from '../assets/apple-logo.png';
+import LoginModal from "./LoginModal";
+import SignUpModal from "./SignUpModal";
 
 
 const GoogleSignup = () => {
@@ -28,8 +30,6 @@ const AppleSignup = () => {
     )
 }
 
-const BlueButton = ({ text }) => <button className='h-10 bg-sky-500 hover:bg-sky-600 rounded-full mt-3 w-[19rem] text-white text-base font-bold'>{text}</button>;
-const NormalButton = ({ text }) => <button className='h-10 rounded-full mt-3 w-[19rem] border border-slate-300 hover:bg-sky-100 text-base font-bold text-sky-500'>{text}</button>;
 
 const Login = () => {
     return (
@@ -50,13 +50,13 @@ const Login = () => {
                         <div className="text-center mx-2">or</div>
                         <div className="w-full h-[1px] bg-slate-100"></div>
                     </div>
-                    <BlueButton text={"Create Account"} />
+                    <SignUpModal />
                     <div className="w-[19rem] text-xs mt-2 text-slate-500">
                         By signing up, you agree to the <span className="text-sky-600">Terms of Service</span> and <span className="text-sky-600">Privacy Policy</span>, including <span className="text-sky-600">Cookie Use</span>.
                     </div>
                     <div className="grid mt-12 gap-2">
                         <div className="font-bold">Already have an account?</div>
-                        <NormalButton text={"Sign In"} />
+                        <LoginModal />
                     </div>
                 </div>
             </div>
